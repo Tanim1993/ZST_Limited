@@ -36,55 +36,55 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-choose-us" class="py-24 bg-slate-50 dark:bg-[#0A0F1D] border-t border-slate-100 dark:border-slate-900/60 transition-colors duration-300 relative overflow-hidden">
+    <section id="why-choose-us" className="py-24 bg-slate-50 dark:bg-[#0A0F1D] border-t border-slate-100 dark:border-slate-900/60 transition-colors duration-300 relative overflow-hidden">
       
       {/* Decorative Blur elements */}
-      <div class="absolute bottom-4 left-1/3 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-4 left-1/3 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Intro */}
-        <div class="max-w-3xl mx-auto text-center mb-16">
-          <span class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block font-mono mb-3">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block font-mono mb-3">
             Corporate Trust
           </span>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight leading-tight">
             Why Trusted by Governments & Global Portfolios
           </h2>
-          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-350 leading-relaxed max-w-2xl mx-auto mt-4">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-350 leading-relaxed max-w-2xl mx-auto mt-4">
             Security, capability, and scale aren't options — they are the core foundations upon which ZST projects are engineered.
           </p>
         </div>
 
         {/* Bento-Inspired Layout */}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           
           {/* Main Hero Card inside Bento (takes 2 rows) */}
-          <div class="lg:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white flex flex-col justify-between shadow-xl min-h-[320px] relative overflow-hidden">
+          <div className="lg:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white flex flex-col justify-between shadow-xl min-h-[320px] relative overflow-hidden">
             
             {/* Absolute vector details */}
-            <div class="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] bg-[size:16px_16px] opacity-10 pointer-events-none" />
-            <div class="absolute -bottom-16 -right-16 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] bg-[size:16px_16px] opacity-10 pointer-events-none" />
+            <div className="absolute -bottom-16 -right-16 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
 
-            <div class="space-y-4">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-[10px] font-bold uppercase tracking-wider">
-                <Zap class="w-3.5 h-3.5" /> High SLA Assurance
+            <div className="space-y-4">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-[10px] font-bold uppercase tracking-wider">
+                <Zap className="w-3.5 h-3.5" /> High SLA Assurance
               </span>
-              <h3 class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+              <h3 className="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight">
                 Zero-Downtime, Clean Audit Trails & Sovereignty
               </h3>
-              <p class="text-xs sm:text-sm text-blue-100 leading-relaxed max-w-xl">
+              <p className="text-xs sm:text-sm text-blue-100 leading-relaxed max-w-xl">
                 We custom design all communication systems, corporate ledger wallets, and NGO geo-coordinated matrices to survive critical failure protocols. Every single database transaction commits synchronously with AES-256 validation checks.
               </p>
             </div>
 
-            <div class="flex flex-wrap items-center gap-6 mt-8 pt-6 border-t border-white/20 text-xs text-blue-100">
-              <span class="flex items-center gap-2">
-                <CheckSquare class="w-4 h-4 text-emerald-400 shrink-0" />
+            <div className="flex flex-wrap items-center gap-6 mt-8 pt-6 border-t border-white/20 text-xs text-blue-100">
+              <span className="flex items-center gap-2">
+                <CheckSquare className="w-4 h-4 text-emerald-400 shrink-0" />
                 ISO 27001 Cryptography Certified
               </span>
-              <span class="flex items-center gap-2">
-                <CheckSquare class="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="flex items-center gap-2">
+                <CheckSquare className="w-4 h-4 text-emerald-400 shrink-0" />
                 Sovereign Data Storage
               </span>
             </div>
@@ -97,29 +97,29 @@ export default function WhyChooseUs() {
               key={idx}
               className="p-6 rounded-2xl bg-white hover:bg-slate-50 dark:bg-[#0D1527] dark:hover:bg-slate-900 border border-slate-200/60 dark:border-slate-800 hover:border-slate-350 dark:hover:border-slate-700 transition-all duration-300 flex flex-col justify-between shadow-sm"
             >
-              <div class="space-y-4">
-                <div class="flex items-center justify-between">
-                  <div class="p-3 bg-slate-50 dark:bg-[#111A2E] rounded-xl text-slate-800 dark:text-white shrink-0 shadow-sm border border-slate-250/30">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="p-3 bg-slate-50 dark:bg-[#111A2E] rounded-xl text-slate-800 dark:text-white shrink-0 shadow-sm border border-slate-250/30">
                     {item.icon}
                   </div>
-                  <span class="text-[9px] uppercase tracking-wider font-bold bg-slate-100 dark:bg-slate-950 text-slate-500 py-0.5 px-2 rounded-full">
+                  <span className="text-[9px] uppercase tracking-wider font-bold bg-slate-100 dark:bg-slate-950 text-slate-500 py-0.5 px-2 rounded-full">
                     {item.badge}
                   </span>
                 </div>
 
-                <div class="space-y-1.5">
-                  <h4 class="font-bold text-slate-900 dark:text-white text-base leading-tight">
+                <div className="space-y-1.5">
+                  <h4 className="font-bold text-slate-900 dark:text-white text-base leading-tight">
                     {item.title}
                   </h4>
-                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
               </div>
 
               {/* Decorative signature link */}
-              <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800/80">
-                <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 block font-mono">
+              <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 block font-mono">
                   ZST Verification Compliant
                 </span>
               </div>

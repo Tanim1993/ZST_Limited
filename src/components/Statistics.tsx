@@ -85,24 +85,24 @@ export default function Statistics() {
   const currentCategory = categories.find((c) => c.id === activeCategory) || categories[0];
 
   return (
-    <section id="stats" class="py-24 bg-white dark:bg-[#0B0F1D] border-t border-slate-100 dark:border-slate-905/60 transition-colors duration-300">
-      <div class="max-w-7xl mx-auto px-6">
+    <section id="stats" className="py-24 bg-white dark:bg-[#0B0F1D] border-t border-slate-100 dark:border-slate-905/60 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6">
         
         {/* Simple visual section head */}
-        <div class="max-w-3xl mx-auto text-center mb-16">
-          <span class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block font-mono mb-3">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block font-mono mb-3">
             ZST Performance Records
           </span>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight">
             Our Enterprise Reach in Numbers
           </h2>
-          <p class="text-slate-500 dark:text-slate-400 text-sm mt-4">
+          <p className="text-slate-500 dark:text-slate-400 text-sm mt-4">
             Click on any corporate division statistic box below to drill down into custom logs, active node metrics, and regional operational milestones.
           </p>
         </div>
 
         {/* Master Category Grid Selection Tabs */}
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {categories.map((c) => {
             const isSelected = activeCategory === c.id;
             return (
@@ -115,7 +115,7 @@ export default function Statistics() {
                     : "bg-slate-50 hover:bg-slate-100 dark:bg-slate-900/60 dark:hover:bg-slate-900 border-slate-200/60 dark:border-slate-800/80"
                 }`}
               >
-                <div class="flex justify-between items-center mb-4">
+                <div className="flex justify-between items-center mb-4">
                   <div className={`p-2.5 rounded-lg shrink-0 ${
                     isSelected ? "bg-white/15 text-white" : "bg-slate-205 dark:bg-slate-850"
                   }`}>
@@ -128,7 +128,7 @@ export default function Statistics() {
                   </span>
                 </div>
 
-                <div class="space-y-1">
+                <div className="space-y-1">
                   <span className={`text-[10px] uppercase tracking-wide block font-semibold ${
                     isSelected ? "text-slate-300" : "text-slate-400"
                   }`}>
@@ -146,47 +146,47 @@ export default function Statistics() {
         </div>
 
         {/* Metric Detail Viewer Panel */}
-        <div class="p-8 md:p-10 rounded-3xl bg-slate-50 dark:bg-[#0D1527] border border-slate-200/60 dark:border-slate-800 shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-12 items-center transition-colors">
+        <div className="p-8 md:p-10 rounded-3xl bg-slate-50 dark:bg-[#0D1527] border border-slate-200/60 dark:border-slate-800 shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-12 items-center transition-colors">
           
           {/* Detailed text (5 cols) */}
-          <div class="lg:col-span-5 space-y-6">
-            <div class="space-y-2">
+          <div className="lg:col-span-5 space-y-6">
+            <div className="space-y-2">
               <span className={`text-xs font-bold uppercase tracking-wider bg-gradient-to-r ${currentCategory.accent} bg-clip-text text-transparent block font-mono`}>
                 {currentCategory.categoryTitle} Milestone Details
               </span>
-              <h3 class="text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight">
+              <h3 className="text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight">
                 {currentCategory.headlineLabel}
               </h3>
             </div>
             
-            <p class="text-sm text-slate-650 dark:text-slate-350 leading-relaxed">
+            <p className="text-sm text-slate-650 dark:text-slate-350 leading-relaxed">
               {currentCategory.description}
             </p>
 
-            <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center gap-3">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center gap-3">
               <TrendingUp className="w-5 h-5 text-emerald-500 shrink-0" />
-              <span class="text-xs text-slate-500">
+              <span className="text-xs text-slate-500">
                 Data refreshed in real-time. Complies with sovereign transactional audit standard registries.
               </span>
             </div>
           </div>
 
           {/* Granular Sub-Metrics grid list (7 cols) */}
-          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6">
             {currentCategory.subMetrics.map((met, index) => (
               <div 
                 key={index} 
-                class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200/50 dark:border-slate-800/80 shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform duration-300"
+                className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200/50 dark:border-slate-800/80 shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform duration-300"
               >
-                <div class="space-y-3">
-                  <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider font-mono">
+                <div className="space-y-3">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider font-mono">
                     {met.label}
                   </span>
                   <span className={`text-lg md:text-xl font-extrabold font-mono leading-none bg-gradient-to-r ${currentCategory.accent} bg-clip-text text-transparent`}>
                     {met.value}
                   </span>
                 </div>
-                <p class="text-[11px] text-slate-500 leading-relaxed mt-4">
+                <p className="text-[11px] text-slate-500 leading-relaxed mt-4">
                   {met.description}
                 </p>
               </div>

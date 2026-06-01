@@ -230,29 +230,29 @@ export default function ProductsSection() {
   const currentProduct = PRODUCTS.find(p => p.id === activeTab) || PRODUCTS[0];
 
   return (
-    <section id="products" class="py-24 bg-slate-50 dark:bg-[#0A0F1D] relative overflow-hidden transition-colors duration-300">
+    <section id="products" className="py-24 bg-slate-50 dark:bg-[#0A0F1D] relative overflow-hidden transition-colors duration-300">
       {/* Decorative ambient gradients */}
-      <div class="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Section Header */}
-        <div class="max-w-3xl mx-auto text-center mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-300 text-xs font-semibold uppercase tracking-wider mb-4">
-            <Award class="w-3.5 h-3.5" />
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-300 text-xs font-semibold uppercase tracking-wider mb-4">
+            <Award className="w-3.5 h-3.5" />
             Software Portfolio
           </div>
-          <h2 class="text-4xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight mb-6">
-            Pioneering Enterprise Software <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-blue-300 dark:to-emerald-400">At National Scale</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight mb-6">
+            Pioneering Enterprise Software <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-blue-300 dark:to-emerald-400">At National Scale</span>
           </h2>
-          <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
             ZST Limited designs and deploys custom-architected platforms used by governments, massive party structures, NGOs, and global corporations.
           </p>
         </div>
 
         {/* Tab System Controls */}
-        <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-12">
           {PRODUCTS.map(p => {
             const isActive = activeTab === p.id;
             return (
@@ -266,12 +266,12 @@ export default function ProductsSection() {
                     : "bg-slate-100/80 dark:bg-slate-900/50 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 text-slate-600 dark:text-slate-400 border-transparent hover:border-slate-300 dark:hover:border-slate-800"
                 }`}
               >
-                {p.id === "fintech" && <Wallet class="w-4 h-4 text-emerald-500" />}
-                {p.id === "connecthub" && <MessageSquare class="w-4 h-4 text-blue-500" />}
-                {p.id === "meetsphere" && <Video class="w-4 h-4 text-indigo-500" />}
-                {p.id === "political" && <Shield class="w-4 h-4 text-sky-500" />}
-                {p.id === "ngo" && <ClipboardCheck class="w-4 h-4 text-emerald-600" />}
-                {p.id === "bi" && <LayoutDashboard class="w-4 h-4 text-slate-500 dark:text-slate-200" />}
+                {p.id === "fintech" && <Wallet className="w-4 h-4 text-emerald-500" />}
+                {p.id === "connecthub" && <MessageSquare className="w-4 h-4 text-blue-500" />}
+                {p.id === "meetsphere" && <Video className="w-4 h-4 text-indigo-500" />}
+                {p.id === "political" && <Shield className="w-4 h-4 text-sky-500" />}
+                {p.id === "ngo" && <ClipboardCheck className="w-4 h-4 text-emerald-600" />}
+                {p.id === "bi" && <LayoutDashboard className="w-4 h-4 text-slate-500 dark:text-slate-200" />}
                 <span>{p.name.split(" ")[1] || p.name}</span>
               </button>
             );
@@ -279,10 +279,10 @@ export default function ProductsSection() {
         </div>
 
         {/* Dynamic Display Layout */}
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[580px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[580px]">
           
           {/* Left Block: Product Details (Covers 5 cols) */}
-          <div class="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-6">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -292,45 +292,45 @@ export default function ProductsSection() {
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
               >
-                <div class="space-y-2">
-                  <span class={`text-sm font-semibold tracking-wide bg-gradient-to-r ${currentProduct.accentColor} bg-clip-text text-transparent uppercase`}>
+                <div className="space-y-2">
+                  <span className={`text-sm font-semibold tracking-wide bg-gradient-to-r ${currentProduct.accentColor} bg-clip-text text-transparent uppercase`}>
                     {currentProduct.tagline}
                   </span>
-                  <h3 class="text-3xl font-bold text-slate-950 dark:text-white tracking-tight">
+                  <h3 className="text-3xl font-bold text-slate-950 dark:text-white tracking-tight">
                     {currentProduct.name}
                   </h3>
                 </div>
 
-                <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base">
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base">
                   {currentProduct.description}
                 </p>
 
                 {/* Bullet Points */}
-                <div class="space-y-4 pt-2">
+                <div className="space-y-4 pt-2">
                   {currentProduct.features.map((feat, idx) => {
                     return (
-                      <div key={idx} class="flex items-start gap-3.5 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-900/60 transition-all duration-300 border border-transparent hover:border-slate-200/50 dark:hover:border-slate-800/40">
-                        <div class="p-2.5 rounded-lg bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 mt-0.5 shrink-0">
-                          {feat.icon === "Wallet" && <Wallet class="w-4 h-4" />}
-                          {feat.icon === "Landmark" && <Landmark class="w-4 h-4" />}
-                          {feat.icon === "QrCode" && <QrCode class="w-4 h-4" />}
-                          {feat.icon === "MessageSquare" && <MessageSquare class="w-4 h-4" />}
-                          {feat.icon === "Users" && <Users class="w-4 h-4" />}
-                          {feat.icon === "Shield" && <Shield class="w-4 h-4" />}
-                          {feat.icon === "Video" && <Video class="w-4 h-4" />}
-                          {feat.icon === "CheckCircle2" && <CheckCircle2 class="w-4 h-4" />}
-                          {feat.icon === "ClipboardCheck" && <ClipboardCheck class="w-4 h-4" />}
-                          {feat.icon === "TrendingUp" && <TrendingUp class="w-4 h-4" />}
-                          {feat.icon === "MapPin" && <MapPin class="w-4 h-4" />}
-                          {feat.icon === "Award" && <Award class="w-4 h-4" />}
-                          {feat.icon === "LayoutDashboard" && <LayoutDashboard class="w-4 h-4" />}
-                          {feat.icon === "RefreshCcw" && <RefreshCcw class="w-4 h-4" />}
+                      <div key={idx} className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-900/60 transition-all duration-300 border border-transparent hover:border-slate-200/50 dark:hover:border-slate-800/40">
+                        <div className="p-2.5 rounded-lg bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 mt-0.5 shrink-0">
+                          {feat.icon === "Wallet" && <Wallet className="w-4 h-4" />}
+                          {feat.icon === "Landmark" && <Landmark className="w-4 h-4" />}
+                          {feat.icon === "QrCode" && <QrCode className="w-4 h-4" />}
+                          {feat.icon === "MessageSquare" && <MessageSquare className="w-4 h-4" />}
+                          {feat.icon === "Users" && <Users className="w-4 h-4" />}
+                          {feat.icon === "Shield" && <Shield className="w-4 h-4" />}
+                          {feat.icon === "Video" && <Video className="w-4 h-4" />}
+                          {feat.icon === "CheckCircle2" && <CheckCircle2 className="w-4 h-4" />}
+                          {feat.icon === "ClipboardCheck" && <ClipboardCheck className="w-4 h-4" />}
+                          {feat.icon === "TrendingUp" && <TrendingUp className="w-4 h-4" />}
+                          {feat.icon === "MapPin" && <MapPin className="w-4 h-4" />}
+                          {feat.icon === "Award" && <Award className="w-4 h-4" />}
+                          {feat.icon === "LayoutDashboard" && <LayoutDashboard className="w-4 h-4" />}
+                          {feat.icon === "RefreshCcw" && <RefreshCcw className="w-4 h-4" />}
                         </div>
                         <div>
-                          <h4 class="font-semibold text-slate-900 dark:text-slate-100 text-sm">
+                          <h4 className="font-semibold text-slate-900 dark:text-slate-100 text-sm">
                             {feat.title}
                           </h4>
-                          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                             {feat.description}
                           </p>
                         </div>
@@ -339,19 +339,19 @@ export default function ProductsSection() {
                   })}
                 </div>
 
-                <div class="flex items-center gap-4 pt-4">
+                <div className="flex items-center gap-4 pt-4">
                   <a 
                     href="#contact" 
                     id={`btn-quote-${currentProduct.id}`}
-                    class="px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/10 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all text-sm"
+                    className="px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/10 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all text-sm"
                   >
                     Request Live Demo
                   </a>
                   <a 
                     href="#contact" 
-                    class="px-5 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-all text-sm flex items-center gap-1.5"
+                    className="px-5 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-all text-sm flex items-center gap-1.5"
                   >
-                    Read Technical Docs <ArrowUpRight class="w-4 h-4" />
+                    Read Technical Docs <ArrowUpRight className="w-4 h-4" />
                   </a>
                 </div>
               </motion.div>
@@ -359,62 +359,62 @@ export default function ProductsSection() {
           </div>
 
           {/* Right Block: Interactive Live Simulator Frame (Covers 7 cols) */}
-          <div class="lg:col-span-7 relative">
+          <div className="lg:col-span-7 relative">
             {/* Ambient Backglow */}
-            <div class="absolute -inset-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-xl opacity-15 dark:opacity-20 percent pointer-events-none" />
+            <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-xl opacity-15 dark:opacity-20 percent pointer-events-none" />
             
-            <div class="relative bg-white dark:bg-[#0D1527] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col h-[520px]">
+            <div className="relative bg-white dark:bg-[#0D1527] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col h-[520px]">
               
               {/* Simulator Header / Topbar */}
-              <div class="bg-slate-50 dark:bg-slate-900/80 px-4 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
-                <div class="flex items-center gap-1.5">
-                  <span class="w-3 h-3 rounded-full bg-red-400 inline-block" />
-                  <span class="w-3 h-3 rounded-full bg-yellow-400 inline-block" />
-                  <span class="w-3 h-3 rounded-full bg-green-400 inline-block" />
-                  <span class="text-xs font-mono text-slate-400 dark:text-slate-500 ml-2 tracking-wider">
+              <div className="bg-slate-50 dark:bg-slate-900/80 px-4 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-3 h-3 rounded-full bg-red-400 inline-block" />
+                  <span className="w-3 h-3 rounded-full bg-yellow-400 inline-block" />
+                  <span className="w-3 h-3 rounded-full bg-green-400 inline-block" />
+                  <span className="text-xs font-mono text-slate-400 dark:text-slate-500 ml-2 tracking-wider">
                     {currentProduct.id.toUpperCase()}_SYSTEM_DEMO.zst
                   </span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-[10px] uppercase tracking-widest font-bold font-mono px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center gap-1 animate-pulse-slow">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" /> LIVE SIMULATOR
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] uppercase tracking-widest font-bold font-mono px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center gap-1 animate-pulse-slow">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" /> LIVE SIMULATOR
                   </span>
                 </div>
               </div>
 
               {/* Dynamic Interactive Panel Body */}
-              <div class="flex-1 overflow-y-auto p-5 font-sans relative">
+              <div className="flex-1 overflow-y-auto p-5 font-sans relative">
                 
                 {activeTab === "fintech" && (
-                  <div class="space-y-4">
+                  <div className="space-y-4">
                     {/* Fake Phone Screen Frame Header */}
-                    <div class="bg-slate-100 dark:bg-slate-900 p-4 rounded-xl flex items-center justify-between border border-slate-200/60 dark:border-slate-800/65">
+                    <div className="bg-slate-100 dark:bg-slate-900 p-4 rounded-xl flex items-center justify-between border border-slate-200/60 dark:border-slate-800/65">
                       <div>
-                        <span class="text-xs text-slate-500 dark:text-slate-400 block font-medium">Available Core Capital</span>
-                        <div class="flex items-baseline gap-2">
-                          <span class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white font-mono">
+                        <span className="text-xs text-slate-500 dark:text-slate-400 block font-medium">Available Core Capital</span>
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white font-mono">
                             ৳ {walletBalance.toLocaleString()}
                           </span>
-                          <span class="text-xs text-emerald-500 font-semibold flex items-center gap-0.5">
-                            +12.4% <ArrowUpRight class="w-3 h-3" />
+                          <span className="text-xs text-emerald-500 font-semibold flex items-center gap-0.5">
+                            +12.4% <ArrowUpRight className="w-3 h-3" />
                           </span>
                         </div>
                       </div>
-                      <div class="p-3 bg-blue-100 dark:bg-blue-900/60 rounded-xl text-blue-600 dark:text-blue-300">
-                        <Wallet class="w-6 h-6" />
+                      <div className="p-3 bg-blue-100 dark:bg-blue-900/60 rounded-xl text-blue-600 dark:text-blue-300">
+                        <Wallet className="w-6 h-6" />
                       </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {/* Interactive Send Money Form */}
-                      <div class="bg-white dark:bg-slate-900/40 p-4 rounded-xl border border-slate-250 dark:border-slate-800/70">
-                        <h4 class="text-xs font-bold text-slate-700 dark:text-slate-300 mb-3 uppercase tracking-wider flex items-center gap-1.5">
-                          <QrCode class="w-3.5 h-3.5 text-emerald-500" />
+                      <div className="bg-white dark:bg-slate-900/40 p-4 rounded-xl border border-slate-250 dark:border-slate-800/70">
+                        <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300 mb-3 uppercase tracking-wider flex items-center gap-1.5">
+                          <QrCode className="w-3.5 h-3.5 text-emerald-500" />
                           Simulate MFS Payout
                         </h4>
-                        <form onSubmit={handleSendMoney} class="space-y-3">
+                        <form onSubmit={handleSendMoney} className="space-y-3">
                           <div>
-                            <label class="text-[10px] text-slate-500 block mb-1">Target Account/Agent</label>
+                            <label className="text-[10px] text-slate-500 block mb-1">Target Account/Agent</label>
                             <input 
                               type="text" 
                               value={sendTarget}
@@ -424,9 +424,9 @@ export default function ProductsSection() {
                             />
                           </div>
                           <div>
-                            <label class="text-[10px] text-slate-500 block mb-1">Disbursement Amount (৳)</label>
-                            <div class="relative">
-                              <span class="absolute left-2.5 top-1.5 text-xs text-slate-500 font-mono">৳</span>
+                            <label className="text-[10px] text-slate-500 block mb-1">Disbursement Amount (৳)</label>
+                            <div className="relative">
+                              <span className="absolute left-2.5 top-1.5 text-xs text-slate-500 font-mono">৳</span>
                               <input 
                                 type="number" 
                                 value={sendAmount}
@@ -440,28 +440,28 @@ export default function ProductsSection() {
                             type="submit"
                             className="w-full bg-emerald-600 text-white py-1.5 px-3 rounded text-xs font-semibold hover:bg-emerald-700 transition cursor-pointer flex items-center justify-center gap-1.5"
                           >
-                            Execute Real-time Ledger Pay <ArrowUpRight class="w-3.5 h-3.5" />
+                            Execute Real-time Ledger Pay <ArrowUpRight className="w-3.5 h-3.5" />
                           </button>
                         </form>
                       </div>
 
                       {/* Transaction Logs */}
-                      <div class="bg-white dark:bg-slate-900/45 p-4 rounded-xl border border-slate-200 dark:border-slate-800/70 overflow-hidden flex flex-col justify-between">
-                        <h4 class="text-xs font-bold text-slate-700 dark:text-slate-400 mb-2 uppercase tracking-wider">
+                      <div className="bg-white dark:bg-slate-900/45 p-4 rounded-xl border border-slate-200 dark:border-slate-800/70 overflow-hidden flex flex-col justify-between">
+                        <h4 className="text-xs font-bold text-slate-700 dark:text-slate-400 mb-2 uppercase tracking-wider">
                           Ledger Audit Logs
                         </h4>
-                        <div class="space-y-2 max-h-[140px] overflow-y-auto pr-1">
+                        <div className="space-y-2 max-h-[140px] overflow-y-auto pr-1">
                           {transactions.map((t) => (
-                            <div key={t.id} class="flex items-center justify-between text-[11px] py-1 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <div key={t.id} className="flex items-center justify-between text-[11px] py-1 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
                               <div>
-                                <span class="font-medium text-slate-800 dark:text-slate-200 block">{t.from}</span>
-                                <span class="text-[9px] text-slate-500">{t.date} • {t.type}</span>
+                                <span className="font-medium text-slate-800 dark:text-slate-200 block">{t.from}</span>
+                                <span className="text-[9px] text-slate-500">{t.date} • {t.type}</span>
                               </div>
-                              <div class="text-right">
-                                <span class={`font-mono font-bold ${t.amount > 0 ? "text-emerald-500" : "text-amber-500"}`}>
+                              <div className="text-right">
+                                <span className={`font-mono font-bold ${t.amount > 0 ? "text-emerald-500" : "text-amber-500"}`}>
                                   {t.amount > 0 ? "+" : ""}{t.amount.toLocaleString()} ৳
                                 </span>
-                                <span class="text-[8px] bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 rounded px-1 ml-1 block w-max ml-auto">
+                                <span className="text-[8px] bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 rounded px-1 ml-1 block w-max ml-auto">
                                   {t.status}
                                 </span>
                               </div>
@@ -474,28 +474,28 @@ export default function ProductsSection() {
                 )}
 
                 {activeTab === "connecthub" && (
-                  <div class="flex flex-col h-full bg-slate-100 dark:bg-[#070D1A] rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800/90">
+                  <div className="flex flex-col h-full bg-slate-100 dark:bg-[#070D1A] rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800/90">
                     {/* Chat channel title */}
-                    <div class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 py-2 flex items-center justify-between">
-                      <div class="flex items-center gap-2">
-                        <span class="text-blue-500 font-extrabold font-mono">#</span>
-                        <span class="text-xs font-bold text-slate-800 dark:text-slate-200">announcements_and_dev_operations</span>
+                    <div className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 py-2 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="text-blue-500 font-extrabold font-mono">#</span>
+                        <span className="text-xs font-bold text-slate-800 dark:text-slate-200">announcements_and_dev_operations</span>
                       </div>
-                      <div class="flex items-center gap-2 text-slate-500">
-                        <Phone class="w-3.5 h-3.5 hover:text-blue-500 cursor-pointer" />
-                        <Users class="w-3.5 h-3.5 hover:text-blue-500 cursor-pointer" />
+                      <div className="flex items-center gap-2 text-slate-500">
+                        <Phone className="w-3.5 h-3.5 hover:text-blue-500 cursor-pointer" />
+                        <Users className="w-3.5 h-3.5 hover:text-blue-500 cursor-pointer" />
                       </div>
                     </div>
 
                     {/* Messages Container */}
-                    <div class="flex-1 overflow-y-auto p-4 space-y-3 min-h-[220px]">
+                    <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-[220px]">
                       {chatMessages.map((msg) => (
-                        <div key={msg.id} class={`flex flex-col ${msg.isSelf ? "items-end" : "items-start"}`}>
-                          <div class="flex items-center gap-1.5 mb-1">
-                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">{msg.sender}</span>
-                            <span class="text-[8px] text-slate-400">{msg.stamp}</span>
+                        <div key={msg.id} className={`flex flex-col ${msg.isSelf ? "items-end" : "items-start"}`}>
+                          <div className="flex items-center gap-1.5 mb-1">
+                            <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400">{msg.sender}</span>
+                            <span className="text-[8px] text-slate-400">{msg.stamp}</span>
                           </div>
-                          <div class={`max-w-[85%] rounded-2xl px-3.5 py-2 text-xs leading-normal shadow-sm ${
+                          <div className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-xs leading-normal shadow-sm ${
                             msg.isSelf 
                               ? "bg-blue-600 text-white rounded-tr-none" 
                               : "bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 rounded-tl-none border border-slate-100 dark:border-slate-850"
@@ -507,7 +507,7 @@ export default function ProductsSection() {
                     </div>
 
                     {/* Chat Form */}
-                    <form onSubmit={handleSendMessage} class="bg-white dark:bg-slate-900 p-2.5 border-t border-slate-200 dark:border-slate-800 flex gap-2">
+                    <form onSubmit={handleSendMessage} className="bg-white dark:bg-slate-900 p-2.5 border-t border-slate-200 dark:border-slate-800 flex gap-2">
                       <input 
                         type="text" 
                         value={chatInput}
@@ -517,80 +517,80 @@ export default function ProductsSection() {
                       />
                       <button 
                         type="submit" 
-                        class="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition shrink-0 cursor-pointer"
+                        className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition shrink-0 cursor-pointer"
                       >
-                        <Send class="w-4 h-4" />
+                        <Send className="w-4 h-4" />
                       </button>
                     </form>
                   </div>
                 )}
 
                 {activeTab === "meetsphere" && (
-                  <div class="space-y-4">
+                  <div className="space-y-4">
                     {/* Video Grid Simulation */}
-                    <div class="grid grid-cols-3 gap-2.5">
-                      <div class="bg-slate-900 rounded-lg overflow-hidden h-[120px] relative border border-slate-800 flex flex-col justify-between p-2">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10" />
-                        <span class="absolute top-2 right-2 bg-red-600 w-1.5 h-1.5 rounded-full animate-pulse z-10" />
-                        <div class="relative z-10 mt-auto flex items-center justify-between text-white text-[10px] w-full font-semibold">
+                    <div className="grid grid-cols-3 gap-2.5">
+                      <div className="bg-slate-900 rounded-lg overflow-hidden h-[120px] relative border border-slate-800 flex flex-col justify-between p-2">
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10" />
+                        <span className="absolute top-2 right-2 bg-red-600 w-1.5 h-1.5 rounded-full animate-pulse z-10" />
+                        <div className="relative z-10 mt-auto flex items-center justify-between text-white text-[10px] w-full font-semibold">
                           <span>MD: Mahmud Hasan</span>
-                          <Mic class="w-3 h-3 text-emerald-400" />
+                          <Mic className="w-3 h-3 text-emerald-400" />
                         </div>
                         {/* Static video representation: glowing grid */}
-                        <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-indigo-950/60 to-slate-950">
-                          <span class="text-xs font-mono font-bold tracking-widest text-indigo-400">MD_CAM</span>
+                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-indigo-950/60 to-slate-950">
+                          <span className="text-xs font-mono font-bold tracking-widest text-indigo-400">MD_CAM</span>
                         </div>
                       </div>
 
-                      <div class="bg-slate-900 rounded-lg overflow-hidden h-[120px] relative border border-slate-800 flex flex-col justify-between p-2">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10" />
-                        <div class="relative z-10 mt-auto flex items-center justify-between text-white text-[10px] w-full font-semibold">
+                      <div className="bg-slate-900 rounded-lg overflow-hidden h-[120px] relative border border-slate-800 flex flex-col justify-between p-2">
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10" />
+                        <div className="relative z-10 mt-auto flex items-center justify-between text-white text-[10px] w-full font-semibold">
                           <span>PM: Tasnim Ara</span>
-                          <Mic class="w-3 h-3 text-emerald-400" />
+                          <Mic className="w-3 h-3 text-emerald-400" />
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#0F2625] to-slate-950">
-                          <span class="text-xs font-mono font-bold tracking-widest text-emerald-400">PM_CAM</span>
+                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#0F2625] to-slate-950">
+                          <span className="text-xs font-mono font-bold tracking-widest text-emerald-400">PM_CAM</span>
                         </div>
                       </div>
 
-                      <div class="bg-slate-900 rounded-lg overflow-hidden h-[120px] relative border border-slate-800 flex flex-col justify-between p-2">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10" />
-                        <div class="relative z-10 mt-auto flex items-center justify-between text-white text-[10px] w-full font-semibold">
+                      <div className="bg-slate-900 rounded-lg overflow-hidden h-[120px] relative border border-slate-800 flex flex-col justify-between p-2">
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10" />
+                        <div className="relative z-10 mt-auto flex items-center justify-between text-white text-[10px] w-full font-semibold">
                           <span>User (You)</span>
-                          {isMuted ? <MicOff class="w-3 h-3 text-red-400" /> : <Mic class="w-3 h-3 text-emerald-400" />}
+                          {isMuted ? <MicOff className="w-3 h-3 text-red-400" /> : <Mic className="w-3 h-3 text-emerald-400" />}
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-950/60 to-slate-950">
+                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-950/60 to-slate-950">
                           {isVideoOn ? (
-                            <span class="text-xs font-mono font-bold tracking-widest text-blue-400">YOUR_FEED</span>
+                            <span className="text-xs font-mono font-bold tracking-widest text-blue-400">YOUR_FEED</span>
                           ) : (
-                            <VideoOff class="w-5 h-5 text-slate-600" />
+                            <VideoOff className="w-5 h-5 text-slate-600" />
                           )}
                         </div>
                       </div>
                     </div>
 
                     {/* Integrated Meeting Poll Widget */}
-                    <div class="bg-slate-50 dark:bg-slate-900/60 p-4 rounded-xl border border-slate-200 dark:border-slate-800/80">
-                      <div class="flex items-center justify-between mb-2">
-                        <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5 uppercase">
-                          <CheckSquare class="w-4 h-4 text-indigo-500" />
+                    <div className="bg-slate-50 dark:bg-slate-900/60 p-4 rounded-xl border border-slate-200 dark:border-slate-800/80">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5 uppercase">
+                          <CheckSquare className="w-4 h-4 text-indigo-500" />
                           Biometric Attendance & Polling
                         </h4>
-                        <span class="text-[9px] bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 px-2 py-0.5 rounded">
+                        <span className="text-[9px] bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 px-2 py-0.5 rounded">
                           Active Cast
                         </span>
                       </div>
-                      <p class="text-xs text-slate-700 dark:text-slate-300 font-medium mb-3">
+                      <p className="text-xs text-slate-700 dark:text-slate-300 font-medium mb-3">
                         {activePoll.title}
                       </p>
 
-                      <div class="space-y-2">
+                      <div className="space-y-2">
                         <div>
-                          <div class="flex justify-between text-[11px] mb-1 font-semibold text-slate-700 dark:text-slate-300">
+                          <div className="flex justify-between text-[11px] mb-1 font-semibold text-slate-700 dark:text-slate-300">
                             <span>YES (Approve / Confirm)</span>
                             <span>{activePoll.yesVotes} of {activePoll.totalVotes} ({Math.round(activePoll.yesVotes / activePoll.totalVotes * 100)}%)</span>
                           </div>
-                          <div class="w-full h-2.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                          <div className="w-full h-2.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                             <div 
                               className="h-full bg-indigo-500 transition-all duration-500"
                               style={{ width: `${activePoll.yesVotes / activePoll.totalVotes * 100}%` }}
@@ -599,11 +599,11 @@ export default function ProductsSection() {
                         </div>
 
                         <div>
-                          <div class="flex justify-between text-[11px] mb-1 font-semibold text-slate-700 dark:text-slate-300">
+                          <div className="flex justify-between text-[11px] mb-1 font-semibold text-slate-700 dark:text-slate-300">
                             <span>NO (Dissent / Reject)</span>
                             <span>{activePoll.noVotes} of {activePoll.totalVotes} ({Math.round(activePoll.noVotes / activePoll.totalVotes * 100)}%)</span>
                           </div>
-                          <div class="w-full h-2.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                          <div className="w-full h-2.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                             <div 
                               className="h-full bg-red-400 transition-all duration-500"
                               style={{ width: `${activePoll.noVotes / activePoll.totalVotes * 100}%` }}
@@ -613,7 +613,7 @@ export default function ProductsSection() {
                       </div>
 
                       {!hasVoted ? (
-                        <div class="flex gap-2.5 mt-4">
+                        <div className="flex gap-2.5 mt-4">
                           <button 
                             onClick={() => handleCastVote("yes")}
                             className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded text-xs py-1.5 font-bold transition cursor-pointer"
@@ -628,27 +628,27 @@ export default function ProductsSection() {
                           </button>
                         </div>
                       ) : (
-                        <p class="text-[10px] text-center text-emerald-500 dark:text-emerald-400 font-medium mt-3.5 flex items-center justify-center gap-1">
-                          <CheckCircle2 class="w-3.5 h-3.5" /> Your biometric token has registered vote audit successfully.
+                        <p className="text-[10px] text-center text-emerald-500 dark:text-emerald-400 font-medium mt-3.5 flex items-center justify-center gap-1">
+                          <CheckCircle2 className="w-3.5 h-3.5" /> Your biometric token has registered vote audit successfully.
                         </p>
                       )}
                     </div>
 
                     {/* Video room shortcuts */}
-                    <div class="flex justify-center gap-4 py-1 border-t border-slate-100 dark:border-slate-800">
+                    <div className="flex justify-center gap-4 py-1 border-t border-slate-100 dark:border-slate-800">
                       <button 
                         onClick={() => setIsMuted(!isMuted)} 
                         className={`p-2 rounded-full cursor-pointer transition ${isMuted ? "bg-red-500 text-white" : "bg-slate-100 dark:bg-slate-800 hover:bg-slate-200"}`}
                       >
-                        {isMuted ? <MicOff class="w-4 h-4" /> : <Mic class="w-4 h-4" />}
+                        {isMuted ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                       </button>
                       <button 
                         onClick={() => setIsVideoOn(!isVideoOn)} 
                         className={`p-2 rounded-full cursor-pointer transition ${!isVideoOn ? "bg-red-500 text-white" : "bg-slate-100 dark:bg-slate-800 hover:bg-slate-200"}`}
                       >
-                        {isVideoOn ? <Video class="w-4 h-4" /> : <VideoOff class="w-4 h-4" />}
+                        {isVideoOn ? <Video className="w-4 h-4" /> : <VideoOff className="w-4 h-4" />}
                       </button>
-                      <button class="bg-red-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold hover:bg-red-700 cursor-pointer">
+                      <button className="bg-red-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold hover:bg-red-700 cursor-pointer">
                         Disconnect Meet
                       </button>
                     </div>
@@ -656,58 +656,58 @@ export default function ProductsSection() {
                 )}
 
                 {activeTab === "political" && (
-                  <div class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                      <div class="bg-blue-50 dark:bg-blue-950/45 p-3 rounded-lg border border-blue-100 dark:border-blue-900/40">
-                        <span class="text-[9px] uppercase tracking-wider font-bold block text-blue-600 dark:text-blue-300">Registered Party Members</span>
-                        <span class="text-xl font-bold font-mono text-slate-900 dark:text-white">4,821,490</span>
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                      <div className="bg-blue-50 dark:bg-blue-950/45 p-3 rounded-lg border border-blue-100 dark:border-blue-900/40">
+                        <span className="text-[9px] uppercase tracking-wider font-bold block text-blue-600 dark:text-blue-300">Registered Party Members</span>
+                        <span className="text-xl font-bold font-mono text-slate-900 dark:text-white">4,821,490</span>
                       </div>
-                      <div class="bg-sky-50 dark:bg-sky-950/45 p-3 rounded-lg border border-sky-100 dark:border-[#0F355C]">
-                        <span class="text-[9px] uppercase tracking-wider font-bold block text-sky-600 dark:text-sky-300 font-semibold">Active Districts</span>
-                        <span class="text-xl font-bold font-mono text-slate-900 dark:text-white">64 / 64</span>
+                      <div className="bg-sky-50 dark:bg-sky-950/45 p-3 rounded-lg border border-sky-100 dark:border-[#0F355C]">
+                        <span className="text-[9px] uppercase tracking-wider font-bold block text-sky-600 dark:text-sky-300 font-semibold">Active Districts</span>
+                        <span className="text-xl font-bold font-mono text-slate-900 dark:text-white">64 / 64</span>
                       </div>
-                      <div class="bg-slate-50 dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-800">
-                        <span class="text-[9px] uppercase tracking-wider font-bold block text-slate-500">Global Campaign Audits</span>
-                        <span class="text-xl font-bold font-mono text-slate-900 dark:text-white">100.0% SECURE</span>
+                      <div className="bg-slate-50 dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-800">
+                        <span className="text-[9px] uppercase tracking-wider font-bold block text-slate-500">Global Campaign Audits</span>
+                        <span className="text-xl font-bold font-mono text-slate-900 dark:text-white">100.0% SECURE</span>
                       </div>
                     </div>
 
-                    <div class="bg-white dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
-                      <h4 class="text-xs font-bold text-slate-800 dark:text-slate-300 mb-3 flex items-center justify-between">
+                    <div className="bg-white dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+                      <h4 className="text-xs font-bold text-slate-800 dark:text-slate-300 mb-3 flex items-center justify-between">
                         <span>Constituency Metric Map</span>
-                        <span class="text-[9px] text-slate-400">Verifying live results across Bangladesh</span>
+                        <span className="text-[9px] text-slate-400">Verifying live results across Bangladesh</span>
                       </h4>
-                      <div class="space-y-2.5">
-                        <div class="flex items-center justify-between text-xs">
-                          <span class="font-medium text-slate-700 dark:text-slate-400">Dhaka Division (Central HQ)</span>
-                          <span class="font-mono text-slate-900 dark:text-white font-bold">1,402,400 Members Verified</span>
+                      <div className="space-y-2.5">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="font-medium text-slate-700 dark:text-slate-400">Dhaka Division (Central HQ)</span>
+                          <span className="font-mono text-slate-900 dark:text-white font-bold">1,402,400 Members Verified</span>
                         </div>
-                        <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
-                          <div class="h-full bg-orange-400 w-[85%]" />
-                        </div>
-
-                        <div class="flex items-center justify-between text-xs">
-                          <span class="font-medium text-slate-700 dark:text-slate-400">Chittagong Division</span>
-                          <span class="font-mono text-slate-900 dark:text-white font-bold">983,000 Members Verified</span>
-                        </div>
-                        <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
-                          <div class="h-full bg-blue-500 w-[68%]" />
+                        <div className="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                          <div className="h-full bg-orange-400 w-[85%]" />
                         </div>
 
-                        <div class="flex items-center justify-between text-xs">
-                          <span class="font-medium text-slate-700 dark:text-slate-400">Rajshahi Division</span>
-                          <span class="font-mono text-slate-900 dark:text-white font-bold text-emerald-500">624,900 Members (Sync Complete)</span>
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="font-medium text-slate-700 dark:text-slate-400">Chittagong Division</span>
+                          <span className="font-mono text-slate-900 dark:text-white font-bold">983,000 Members Verified</span>
                         </div>
-                        <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
-                          <div class="h-full bg-emerald-500 w-[95%]" />
+                        <div className="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                          <div className="h-full bg-blue-500 w-[68%]" />
+                        </div>
+
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="font-medium text-slate-700 dark:text-slate-400">Rajshahi Division</span>
+                          <span className="font-mono text-slate-900 dark:text-white font-bold text-emerald-500">624,900 Members (Sync Complete)</span>
+                        </div>
+                        <div className="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                          <div className="h-full bg-emerald-500 w-[95%]" />
                         </div>
                       </div>
                     </div>
 
-                    <div class="bg-indigo-50 dark:bg-[#0E203B] p-3.5 rounded-lg border border-indigo-100 dark:border-indigo-950 flex items-center justify-between">
-                      <div class="flex items-center gap-2">
-                        <ShieldCheck class="w-5 h-5 text-indigo-500 shrink-0" />
-                        <span class="text-xs text-indigo-900 dark:text-indigo-200">
+                    <div className="bg-indigo-50 dark:bg-[#0E203B] p-3.5 rounded-lg border border-indigo-100 dark:border-indigo-950 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <ShieldCheck className="w-5 h-5 text-indigo-500 shrink-0" />
+                        <span className="text-xs text-indigo-900 dark:text-indigo-200">
                           <strong>Sovereign Compliance:</strong> Built dedicated servers with strict offline biometric identity backups.
                         </span>
                       </div>
@@ -716,22 +716,22 @@ export default function ProductsSection() {
                 )}
 
                 {activeTab === "ngo" && (
-                  <div class="space-y-4">
-                    <div class="bg-emerald-50 dark:bg-emerald-950/40 p-4 rounded-xl border border-emerald-150 dark:border-emerald-900/40 flex items-center justify-between">
+                  <div className="space-y-4">
+                    <div className="bg-emerald-50 dark:bg-emerald-950/40 p-4 rounded-xl border border-emerald-150 dark:border-emerald-900/40 flex items-center justify-between">
                       <div>
-                        <span class="text-xs text-emerald-700 dark:text-emerald-400 font-bold block">Live NGO Survey Forms Dispatched</span>
-                        <span class="text-3xl font-extrabold font-mono text-emerald-600 dark:text-emerald-300">
+                        <span className="text-xs text-emerald-700 dark:text-emerald-400 font-bold block">Live NGO Survey Forms Dispatched</span>
+                        <span className="text-3xl font-extrabold font-mono text-emerald-600 dark:text-emerald-300">
                           {surveySubmissions} Surveys Listed
                         </span>
                       </div>
-                      <Globe class="w-10 h-10 text-emerald-500/70" />
+                      <Globe className="w-10 h-10 text-emerald-500/70" />
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {/* Interactive Builder */}
-                      <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
-                        <h4 class="text-xs font-bold text-slate-800 dark:text-slate-300 mb-2 uppercase">Create Active Field Dispatch</h4>
-                        <form onSubmit={handleAddSurvey} class="space-y-2">
+                      <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+                        <h4 className="text-xs font-bold text-slate-800 dark:text-slate-300 mb-2 uppercase">Create Active Field Dispatch</h4>
+                        <form onSubmit={handleAddSurvey} className="space-y-2">
                           <div>
                             <input 
                               type="text" 
@@ -754,22 +754,22 @@ export default function ProductsSection() {
                             type="submit" 
                             className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs py-1.5 font-bold cursor-pointer transition flex items-center justify-center gap-1"
                           >
-                            <Plus class="w-3.5 h-3.5" /> Deploy Live GIS Survey Form
+                            <Plus className="w-3.5 h-3.5" /> Deploy Live GIS Survey Form
                           </button>
                         </form>
                       </div>
 
                       {/* Surveys List */}
-                      <div class="bg-white dark:bg-slate-900/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
-                        <span class="text-xs font-bold text-slate-700 dark:text-slate-400 block mb-2">Live Survey Indices</span>
-                        <div class="space-y-2 max-h-[120px] overflow-y-auto">
+                      <div className="bg-white dark:bg-slate-900/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                        <span className="text-xs font-bold text-slate-700 dark:text-slate-400 block mb-2">Live Survey Indices</span>
+                        <div className="space-y-2 max-h-[120px] overflow-y-auto">
                           {surveys.map((s, i) => (
-                            <div key={i} class="text-[11px] bg-slate-50 dark:bg-slate-900/80 p-2 rounded border border-slate-150 dark:border-slate-800/80">
-                              <div class="flex justify-between font-semibold text-slate-800 dark:text-slate-200">
+                            <div key={i} className="text-[11px] bg-slate-50 dark:bg-slate-900/80 p-2 rounded border border-slate-150 dark:border-slate-800/80">
+                              <div className="flex justify-between font-semibold text-slate-800 dark:text-slate-200">
                                 <span>{s.name}</span>
-                                <span class="font-mono text-emerald-500">Live</span>
+                                <span className="font-mono text-emerald-500">Live</span>
                               </div>
-                              <div class="flex justify-between text-[9px] text-slate-500 mt-0.5">
+                              <div className="flex justify-between text-[9px] text-slate-500 mt-0.5">
                                 <span>Area: {s.area}</span>
                                 <span>{Math.floor(s.responders + Math.random() * 5)} submissions</span>
                               </div>
@@ -782,33 +782,33 @@ export default function ProductsSection() {
                 )}
 
                 {activeTab === "bi" && (
-                  <div class="space-y-4">
+                  <div className="space-y-4">
                     {/* Metrics row */}
-                    <div class="grid grid-cols-3 gap-3">
-                      <div class="bg-slate-50 dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-800 text-center">
-                        <span class="text-[9px] text-slate-500 block uppercase font-bold">Annual Volume (USD)</span>
-                        <span class="text-sm md:text-lg font-bold font-mono text-blue-600 dark:text-blue-400">
+                    <div className="grid grid-cols-3 gap-3">
+                      <div className="bg-slate-50 dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-800 text-center">
+                        <span className="text-[9px] text-slate-500 block uppercase font-bold">Annual Volume (USD)</span>
+                        <span className="text-sm md:text-lg font-bold font-mono text-blue-600 dark:text-blue-400">
                           ${(biRevenue / 1000000).toFixed(2)}M
                         </span>
                       </div>
-                      <div class="bg-slate-50 dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-800 text-center">
-                        <span class="text-[9px] text-slate-500 block uppercase font-bold">Active API Consumers</span>
-                        <span class="text-sm md:text-lg font-bold font-mono text-slate-800 dark:text-white">
+                      <div className="bg-slate-50 dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-800 text-center">
+                        <span className="text-[9px] text-slate-500 block uppercase font-bold">Active API Consumers</span>
+                        <span className="text-sm md:text-lg font-bold font-mono text-slate-800 dark:text-white">
                           {biActiveEngagements.toLocaleString()}
                         </span>
                       </div>
-                      <div class="bg-slate-50 dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-800 text-center">
-                        <span class="text-[9px] text-slate-500 block uppercase font-bold">ZST Cloud SLA</span>
-                        <span class="text-sm md:text-lg font-bold font-mono text-emerald-500">
+                      <div className="bg-slate-50 dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-800 text-center">
+                        <span className="text-[9px] text-slate-500 block uppercase font-bold">ZST Cloud SLA</span>
+                        <span className="text-sm md:text-lg font-bold font-mono text-emerald-500">
                           {biPerformanceIndex}%
                         </span>
                       </div>
                     </div>
 
                     {/* Chart Mockup */}
-                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col justify-between h-[210px]">
-                      <div class="flex items-center justify-between">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Enterprise High-Capacity Core System Load</span>
+                    <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col justify-between h-[210px]">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400">Enterprise High-Capacity Core System Load</span>
                         <button 
                           onClick={triggerBiRefresh}
                           className="p-1 px-2.5 rounded bg-slate-800 text-slate-300 hover:text-white text-[10px] cursor-pointer inline-flex items-center gap-1 transition"
@@ -819,17 +819,17 @@ export default function ProductsSection() {
                       </div>
 
                       {/* Mock bars */}
-                      <div class="flex items-end justify-between gap-2.5 h-32 pt-4">
+                      <div className="flex items-end justify-between gap-2.5 h-32 pt-4">
                         {[50, 82, 38, 92, 110, 88, 140, 115, 155, 120, 134, 160].map((h, i) => {
                           const noise = isRefreshingBi ? Math.floor(Math.random() * 20 - 10) : 0;
                           const calculatedHeight = Math.max(15, h + noise);
                           return (
-                            <div key={i} class="flex-1 flex flex-col items-center">
+                            <div key={i} className="flex-1 flex flex-col items-center">
                               <div 
                                 className="w-full bg-gradient-to-t from-blue-600 to-indigo-400 dark:from-blue-500 dark:to-emerald-400 rounded-t transition-all duration-500" 
                                 style={{ height: `${(calculatedHeight / 190) * 110}px` }}
                               />
-                              <span class="text-[8px] text-slate-600 font-mono mt-1">Q{Math.ceil((i+1)/3)}</span>
+                              <span className="text-[8px] text-slate-600 font-mono mt-1">Q{Math.ceil((i+1)/3)}</span>
                             </div>
                           );
                         })}
@@ -841,9 +841,9 @@ export default function ProductsSection() {
               </div>
 
               {/* Status bar */}
-              <div class="px-4 py-2 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-[10px] text-slate-500 flex justify-between items-center shrink-0">
-                <span class="flex items-center gap-1">
-                  <span class="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              <div className="px-4 py-2 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-[10px] text-slate-500 flex justify-between items-center shrink-0">
+                <span className="flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                   E2E Encryption Standard : AES_256_GCM
                 </span>
                 <span>Telemetry Status: SECURE</span>

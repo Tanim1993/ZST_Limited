@@ -71,58 +71,58 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" class="py-24 bg-white dark:bg-[#0B0F1D] border-t border-slate-100 dark:border-slate-900/60 transition-colors duration-300 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-white dark:bg-[#0B0F1D] border-t border-slate-100 dark:border-slate-900/60 transition-colors duration-300 relative overflow-hidden">
       {/* Decorative Blur elements */}
-      <div class="absolute bottom-10 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header Block */}
-        <div class="max-w-3xl mx-auto text-center mb-16">
-          <span class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block font-mono mb-3">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block font-mono mb-3">
             Contact & Advisory
           </span>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight leading-tight">
             Initiate Dynamic Partnership Hub
           </h2>
-          <p class="text-slate-650 dark:text-slate-350 text-base leading-relaxed mt-4">
+          <p className="text-slate-650 dark:text-slate-350 text-base leading-relaxed mt-4">
             Connect directly with ZST Limited's Dhaka headquarters to explore high-capacity software licensing or global distribution contracts.
           </p>
         </div>
 
         {/* Master Column Split: Contact Form (Left) vs Interactive ChatBot & FAQs (Right) */}
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Column 1: Contact Form & HQ Coordinates (5 cols) */}
-          <div class="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-8">
             
-            <div class="bg-slate-50 dark:bg-[#0D1527] border border-slate-205 dark:border-slate-800 rounded-3xl p-6 shadow-md">
-              <h3 class="text-lg font-extrabold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                <Landmark class="w-5 h-5 text-blue-500" />
+            <div className="bg-slate-50 dark:bg-[#0D1527] border border-slate-205 dark:border-slate-800 rounded-3xl p-6 shadow-md">
+              <h3 className="text-lg font-extrabold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                <Landmark className="w-5 h-5 text-blue-500" />
                 Dhaka Corporate Headquarters
               </h3>
 
-              <div class="space-y-4">
-                <div class="flex items-start gap-3 text-xs md:text-sm text-slate-650 dark:text-slate-350 leading-relaxed">
-                  <MapPin class="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
+              <div className="space-y-4">
+                <div className="flex items-start gap-3 text-xs md:text-sm text-slate-650 dark:text-slate-350 leading-relaxed">
+                  <MapPin className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
                   <div>
-                    <strong class="text-slate-900 dark:text-white block font-semibold mb-1">Corporate Office</strong>
+                    <strong className="text-slate-900 dark:text-white block font-semibold mb-1">Corporate Office</strong>
                     <span>ZST Tower, Level 14—16, Gulshan Commercial District, Dhaka-1212, Bangladesh</span>
                   </div>
                 </div>
 
-                <div class="flex items-center gap-3 text-xs md:text-sm text-slate-650 dark:text-slate-350">
-                  <Phone class="w-5 h-5 text-emerald-500 shrink-0" />
+                <div className="flex items-center gap-3 text-xs md:text-sm text-slate-650 dark:text-slate-350">
+                  <Phone className="w-5 h-5 text-emerald-500 shrink-0" />
                   <div>
-                    <strong class="text-slate-900 dark:text-white block font-semibold mb-0.5">Commercial Advisory</strong>
+                    <strong className="text-slate-900 dark:text-white block font-semibold mb-0.5">Commercial Advisory</strong>
                     <span>+880 2-9840240</span>
                   </div>
                 </div>
 
-                <div class="flex items-center gap-3 text-xs md:text-sm text-slate-650 dark:text-slate-350">
-                  <Mail class="w-5 h-5 text-indigo-500 shrink-0" />
+                <div className="flex items-center gap-3 text-xs md:text-sm text-slate-650 dark:text-slate-350">
+                  <Mail className="w-5 h-5 text-indigo-500 shrink-0" />
                   <div>
-                    <strong class="text-slate-900 dark:text-white block font-semibold mb-0.5">Sovereign Sales</strong>
+                    <strong className="text-slate-900 dark:text-white block font-semibold mb-0.5">Sovereign Sales</strong>
                     <span>info@zst-bd.com</span>
                   </div>
                 </div>
@@ -130,14 +130,14 @@ export default function Contact() {
             </div>
 
             {/* Direct Contact Form */}
-            <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm">
-              <h4 class="font-bold text-slate-950 dark:text-white text-base mb-4 block">
+            <div className="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm">
+              <h4 className="font-bold text-slate-950 dark:text-white text-base mb-4 block">
                 Sovereign Inquiry Form
               </h4>
-              <form onSubmit={handleFormSubmit} class="space-y-4">
-                <div class="grid grid-cols-2 gap-4">
+              <form onSubmit={handleFormSubmit} className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label class="text-[10px] text-slate-500 uppercase tracking-wider block font-mono mb-1">Name</label>
+                    <label className="text-[10px] text-slate-500 uppercase tracking-wider block font-mono mb-1">Name</label>
                     <input 
                       type="text" 
                       required
@@ -148,7 +148,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label class="text-[10px] text-slate-500 uppercase tracking-wider block font-mono mb-1">Email</label>
+                    <label className="text-[10px] text-slate-500 uppercase tracking-wider block font-mono mb-1">Email</label>
                     <input 
                       type="email" 
                       required
@@ -161,7 +161,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label class="text-[10px] text-slate-500 uppercase tracking-wider block font-mono mb-1">Corporation or Ministry</label>
+                  <label className="text-[10px] text-slate-500 uppercase tracking-wider block font-mono mb-1">Corporation or Ministry</label>
                   <input 
                     type="text" 
                     value={formData.company}
@@ -172,7 +172,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label class="text-[10px] text-slate-500 uppercase tracking-wider block font-mono mb-1">Scope Parameters / Message</label>
+                  <label className="text-[10px] text-slate-500 uppercase tracking-wider block font-mono mb-1">Scope Parameters / Message</label>
                   <textarea 
                     rows={4}
                     required
@@ -193,8 +193,8 @@ export default function Contact() {
               </form>
 
               {formSuccess && (
-                <div class="mt-4 p-3 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900 rounded-lg text-emerald-800 dark:text-emerald-400 text-xs font-semibold flex items-center gap-2 animate-fade-in">
-                  <CheckCircle2 class="w-4 h-4 text-emerald-500" />
+                <div className="mt-4 p-3 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900 rounded-lg text-emerald-800 dark:text-emerald-400 text-xs font-semibold flex items-center gap-2 animate-fade-in">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                   Your partnership proposal has committed to our Gulshan routing ledger. A team director will follow up with you shortly.
                 </div>
               )}
@@ -203,26 +203,26 @@ export default function Contact() {
           </div>
 
           {/* Column 2: Interactive Advisor Chat & Accordion FAQs (7 cols) */}
-          <div class="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-8">
             
             {/* Interactive Support Chatbot Simulation */}
-            <div class="bg-slate-950 text-white rounded-3xl p-6 border border-slate-800 shadow-2xl flex flex-col justify-between h-[280px]">
+            <div className="bg-slate-950 text-white rounded-3xl p-6 border border-slate-800 shadow-2xl flex flex-col justify-between h-[280px]">
               <div>
-                <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-                  <div class="flex items-center gap-2">
-                    <Bot class="w-4 h-4 text-emerald-400" />
-                    <span class="text-xs font-mono text-slate-350 uppercase tracking-wider">ZST SLA Support Telemetry Bot</span>
+                <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                  <div className="flex items-center gap-2">
+                    <Bot className="w-4 h-4 text-emerald-400" />
+                    <span className="text-xs font-mono text-slate-350 uppercase tracking-wider">ZST SLA Support Telemetry Bot</span>
                   </div>
-                  <span class="text-[9px] bg-emerald-950 text-emerald-400 px-2.5 py-0.5 rounded-full uppercase tracking-wider font-bold">
+                  <span className="text-[9px] bg-emerald-950 text-emerald-400 px-2.5 py-0.5 rounded-full uppercase tracking-wider font-bold">
                     Online
                   </span>
                 </div>
 
                 {/* Messages Container */}
-                <div class="space-y-3.5 max-h-[145px] overflow-y-auto pr-1">
+                <div className="space-y-3.5 max-h-[145px] overflow-y-auto pr-1">
                   {chatMessages.map(msg => (
-                    <div key={msg.id} class={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
-                      <div class={`max-w-[85%] rounded-2xl px-3.5 py-2 text-xs leading-normal ${
+                    <div key={msg.id} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
+                      <div className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-xs leading-normal ${
                         msg.sender === "user"
                           ? "bg-blue-600 text-white rounded-tr-none"
                           : "bg-slate-900 border border-slate-800 text-slate-200 rounded-tl-none font-medium"
@@ -232,15 +232,15 @@ export default function Contact() {
                     </div>
                   ))}
                   {botIsTyping && (
-                    <p class="text-[10px] text-slate-500 font-mono italic animate-pulse">Syncing encrypted advisory logs...</p>
+                    <p className="text-[10px] text-slate-500 font-mono italic animate-pulse">Syncing encrypted advisory logs...</p>
                   )}
                 </div>
               </div>
 
               {/* Prefabricated Queries Selector bottom bar */}
-              <div class="pt-3 border-t border-slate-800 space-y-2.5">
-                <span class="text-[9px] text-slate-500 uppercase font-bold block font-mono">Select Query for Instant Analytics Response</span>
-                <div class="flex flex-wrap gap-2">
+              <div className="pt-3 border-t border-slate-800 space-y-2.5">
+                <span className="text-[9px] text-slate-500 uppercase font-bold block font-mono">Select Query for Instant Analytics Response</span>
+                <div className="flex flex-wrap gap-2">
                   {botQueries.map(q => (
                     <button
                       key={q.id}
@@ -255,12 +255,12 @@ export default function Contact() {
             </div>
 
             {/* Accordion FAQs */}
-            <div class="space-y-4">
-              <h3 class="text-lg font-bold text-slate-950 dark:text-white block mb-2">
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold text-slate-950 dark:text-white block mb-2">
                 Frequently Asked Corporate Inquiries
               </h3>
 
-              <div class="space-y-2.5">
+              <div className="space-y-2.5">
                 {faqs.map((faq, idx) => {
                   const isOpen = openFaq === idx;
                   return (
@@ -278,7 +278,7 @@ export default function Contact() {
                       </button>
                       
                       {isOpen && (
-                        <div class="p-4 pt-3 text-xs md:text-sm text-slate-600 dark:text-slate-350 leading-relaxed bg-white dark:bg-[#0B0F1D] border-t border-slate-150 dark:border-slate-850/80 animate-fade-in">
+                        <div className="p-4 pt-3 text-xs md:text-sm text-slate-600 dark:text-slate-350 leading-relaxed bg-white dark:bg-[#0B0F1D] border-t border-slate-150 dark:border-slate-850/80 animate-fade-in">
                           {faq.answer}
                         </div>
                       )}
